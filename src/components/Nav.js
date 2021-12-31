@@ -5,7 +5,7 @@ import logo from '../assets/images/logo-bg.png';
 
 const Nav = () => {
   return (
-     <nav className="nav">
+     <nav className={classes.nav}>
       <ul>
         <li>
           <a href="index.html" className={classes.brand}>

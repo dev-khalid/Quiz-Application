@@ -1,13 +1,13 @@
 import React from 'react'
-import '../styles/App.css'
+import '../styles/App.css' 
+import Layout from './Layout'
+import Videos from './Videos'
 const App = () => {
   return (
-    <div>
-      hello from frontend
-    </div>
+      <Layout> 
+        <Videos />
+        </Layout>
   )
-}
-//now it's time to organize frontend.
-
+} 
 
 export default App
