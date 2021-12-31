@@ -18,3 +18,22 @@ const Videos = () => {
 };
 
 export default Videos;
+
+/**
+ * monolyth - one database 1M user - 10M (not possible)
+ * microservice - distributed server  
+ * node.js firebase
+ * connect firebase to visual studio code 
+ * 
+ * 
+ * 
+ * 
+ * System Design 
+ * distributed server - latency more 
+ * load balancer 
+ * database partition (system design)
+ * caching - radis 
+ * cdn 
+ * message queue 
+ * 
+ */
