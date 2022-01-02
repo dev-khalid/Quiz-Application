@@ -2,6 +2,7 @@ import React from 'react'
 import Form from './Form'
 import Button from './Button'
 import TextInput from './TextInput'
+import { NavLink } from 'react-router-dom'
 
 const LoginForm = () => {
   return (
@@ -10,7 +11,7 @@ const LoginForm = () => {
       <TextInput type="password" placeholder="Enter Password" icon="lock" />
       <Button>Submit Now</Button>
       <div class="info">
-        Don't have an account? <a href="signup.html">Signup</a> instead.
+        Don't have an account? <NavLink to="/signup">Signup</NavLink> instead.
       </div>
     </Form>
   );

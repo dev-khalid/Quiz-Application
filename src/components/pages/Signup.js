@@ -5,6 +5,7 @@ import TextInput from '../TextInput';
 import classes from '../../styles/Signup.module.css';
 import Checkbox from '../Checkbox'; 
 import Button from '../Button'; 
+import { NavLink } from 'react-router-dom';
 
 const Signup = () => {
   return (
@@ -23,7 +24,7 @@ const Signup = () => {
           <Checkbox text=" I agree to the Terms &amp; Conditions" />
           <Button>Submit Now</Button>
           <div className="info">
-            Already have an account? <a href="login.html">Login</a> instead.
+            Already have an account? <NavLink to="/login">Login</NavLink> instead.
           </div>
         </Form>
       </div>

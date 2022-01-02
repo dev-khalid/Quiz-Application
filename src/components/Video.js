@@ -1,10 +1,12 @@
 import React from 'react';
 import classes from '../styles/Video.module.css';
 import image from '../assets/images/3.jpg'; 
+import {NavLink} from 'react-router-dom'; 
 
 const Videos = () => {
+  //TODO: here the quiz page is not benig rendered without the id so no problem with that . when the data will come from backend each video will must have an id . 
   return (
-    <a href="quiz.html">
+    <NavLink to="/quiz">
       <div className={classes.video}>
         <img src={image} alt='video title' />
         <p>#23 React Hooks Bangla - React useReducer hook Bangla</p>
@@ -13,7 +15,7 @@ const Videos = () => {
           <p>Score : Not taken yet</p>
         </div>
       </div>
-    </a>
+    </NavLink>
   );
 };
 
