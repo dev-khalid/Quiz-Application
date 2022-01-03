@@ -4,7 +4,7 @@ import signupImage from '../assets/images/signup.svg';
 
 const Illustration = () => {
   return (
-    <div class={classes.illustration}>
+    <div className={classes.illustration}>
       <img src={signupImage} alt="Signup" />
     </div>
   );
