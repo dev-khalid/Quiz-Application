@@ -2,8 +2,9 @@ import React from 'react'
 import Answers from '../Answers'; 
 import MiniPlayer from '../MiniPlayer'; 
 import ProgressBar from '../ProgressBar'; 
-
+import PrivateRoute from './PrivateRoute';
 const Quiz = () => {
+  PrivateRoute(); 
   return (
     <>
       <h1>Pick three of your favorite Star Wars Flims</h1>

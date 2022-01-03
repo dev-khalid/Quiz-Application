@@ -8,18 +8,18 @@ import Quiz from './pages/Quiz';
 import Result from './pages/Result';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from '../contexts/AuthContext';
-
 const App = () => {
   return (
     <Router>
       <AuthProvider>
         <Layout>
           <Routes>
+            {/* I will hardcode the condition in each and every page for login and signup redirect .  */}
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/quiz/:id?" element={<Quiz />} />
-            <Route path="/result/:id?" element={<Result />} />
+            <Route path="/quiz" element={<Quiz />} />
+            <Route path="/result" element={<Result />} />
           </Routes>
         </Layout>
       </AuthProvider>
