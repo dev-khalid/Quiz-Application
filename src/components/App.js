@@ -28,3 +28,24 @@ const App = () => {
 };
 
 export default App;
+
+/**
+ * Project with what i have learned so far .
+ * aws - Amplyfy
+ * GitHub Actions
+ * Jenkins
+ * Testing
+ * Tailwind
+ * GraphQl
+ * TypeOrm with MySql.
+ * adobe xd
+ * photoshop
+ * video editing
+ * done. Finally I can start applying anywhere .
+ *
+ *
+ * Upgrade myself:
+ * Next.js
+ * Nest.js
+ *
+ */
