@@ -8,18 +8,32 @@ import Quiz from './pages/Quiz';
 import Result from './pages/Result';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from '../contexts/AuthContext';
+import PrivateRoute from './PrivateRoute';
 const App = () => {
   return (
     <Router>
       <AuthProvider>
         <Layout>
           <Routes> 
-            {/* Need to make the route Private As per the following link: https://dev.to/iamandrewluca/private-route-in-react-router-v6-lg5 */}
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/quiz/:id" element={<Quiz />} />
-            <Route path="/result/:id" element={<Result />} />
+            <Route path="/login" element={<Login />} /> 
+            <Route
+              path="/quiz/:id"
+              element={
+                <PrivateRoute>
+                  <Quiz />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/result/:id"
+              element={
+                <PrivateRoute>
+                  <Result />
+                </PrivateRoute>
+              }
+            /> 
           </Routes>
         </Layout>
       </AuthProvider>
@@ -48,5 +62,5 @@ export default App;
  * Next.js
  * Nest.js
  *
- * 
+ *
  */

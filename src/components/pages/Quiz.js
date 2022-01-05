@@ -2,7 +2,7 @@ import React, { useState, useEffect, useReducer } from 'react';
 import Answers from '../Answers';
 import MiniPlayer from '../MiniPlayer';
 import ProgressBar from '../ProgressBar';
-import PrivateRoute from './PrivateRoute';
+// import PrivateRoute from './PrivateRoute';
 import _ from 'lodash';
 import { useAuth } from '../../contexts/AuthContext';
 import useQuestions from '../../hooks/useQuestions';
