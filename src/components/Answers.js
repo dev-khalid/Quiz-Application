@@ -1,12 +1,21 @@
-import React from 'react'
+import React from 'react';
 import classes from '../styles/Ansers.module.css';
-import Checkbox from './Checkbox'; 
-const Answers = () => {
+import Checkbox from './Checkbox';
+const Answers = ({ options = [], handleChange }) => {
   return (
     <div className={classes.answers}>
-      <Checkbox className={classes.answer} text='Test Answer' />
+      {options.map((option, index) => (
+        <Checkbox
+          key={index}
+          className={classes.answer}
+          text={option.title}
+          value={index}
+          checked={options.checked}
+          onChange={(e) => handleChange(e, index)}
+        />
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Answers
+export default Answers;

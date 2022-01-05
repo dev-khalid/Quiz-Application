@@ -13,13 +13,13 @@ const App = () => {
     <Router>
       <AuthProvider>
         <Layout>
-          <Routes>
-            {/* I will hardcode the condition in each and every page for login and signup redirect .  */}
+          <Routes> 
+            {/* Need to make the route Private As per the following link: https://dev.to/iamandrewluca/private-route-in-react-router-v6-lg5 */}
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/result" element={<Result />} />
+            <Route path="/quiz/:id" element={<Quiz />} />
+            <Route path="/result/:id" element={<Result />} />
           </Routes>
         </Layout>
       </AuthProvider>
@@ -48,4 +48,5 @@ export default App;
  * Next.js
  * Nest.js
  *
+ * 
  */
