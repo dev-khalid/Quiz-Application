@@ -24,6 +24,7 @@ export const AuthProvider = ({ children }) => {
       setCurrentUser(user); 
       setLoading(false); 
     })
+    return unsubscribe(); 
   },[])
 
   async function signup(email, password, username) {
