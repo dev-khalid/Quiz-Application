@@ -6,7 +6,7 @@ import ProgressBar from '../ProgressBar';
 import _ from 'lodash';
 import { useAuth } from '../../contexts/AuthContext';
 import useQuestions from '../../hooks/useQuestions';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate,useLocation } from 'react-router-dom';
 import { getDatabase, ref, set } from 'firebase/database';
 
 const initialState = null;
@@ -41,6 +41,7 @@ const Quiz = () => {
 
   const [qna, dispatch] = useReducer(reducer, initialState);
   const { currentUser } = useAuth();
+  const {state} = useLocation();  
   const navigate = useNavigate(); 
 
   useEffect(() => {
@@ -63,6 +64,7 @@ const Quiz = () => {
     if (currentQuestion + 1 < questions.length) {
       setCurrentQuestion((prevCurrent) => prevCurrent + 1);
     }
+
   }
 
    function prevQuestion() {
@@ -89,13 +91,13 @@ const Quiz = () => {
       {loading && <div>Loading ...</div>}
       {error && <div>There was an error!</div>}
       {!loading && !error && qna && qna.length > 0 && (
-        
         <>
           <h1>{qna[currentQuestion].title}</h1>
           <h4>Question can have multiple answers</h4>
           <Answers
             options={qna[currentQuestion].options}
             handleChange={handleAnswerChange}
+            input
           />
           <ProgressBar
             next={nextQuestion}
@@ -103,7 +105,7 @@ const Quiz = () => {
             submit={submit}
             progress={percentage}
           />
-          <MiniPlayer />
+          <MiniPlayer title={state.videoTitle} id={id} />
         </>
       )}
     </>

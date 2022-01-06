@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import Video from './Video';
 import { NavLink } from 'react-router-dom';
 import InfiniteScroll from 'react-infinite-scroll-component';
@@ -17,7 +17,11 @@ const Videos = () => {
         >
           {videos.map((video) =>
             video.noq > 0 ? (
-              <NavLink to={`/quiz/${video.youtubeID}`} key={video.youtubeID}>
+              <NavLink
+                to={`/quiz/${video.youtubeID}`}
+                state={{ x: 'something', videoTitle: video.title }}
+                key={video.youtubeID}
+              >
                 <Video
                   title={video.title}
                   id={video.youtubeID}
@@ -25,7 +29,12 @@ const Videos = () => {
                 />
               </NavLink>
             ) : (
-              <Video key={`${video.youtubeID}123`} title={video.title} id={video.youtubeID} noq={video.noq} />
+              <Video
+                key={`${video.youtubeID}123`}
+                title={video.title}
+                id={video.youtubeID}
+                noq={video.noq}
+              />
             )
           )}
         </InfiniteScroll>
