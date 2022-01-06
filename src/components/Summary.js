@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import classes from '../styles/Summary.module.css';
 import image from '../assets/images/success.png';
 const Summary = ({ score, noq }) => {

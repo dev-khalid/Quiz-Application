@@ -7,7 +7,7 @@ import _ from 'lodash';
 const Result = () => { 
   const {id} = useParams(); 
   const {state:qna} = useLocation(); 
-  const {loading,error,answers} = useAnswers(id); 
+  const {answers} = useAnswers(id); 
   //eikhane ansers and qna gulake check kore just analysis complte kote hobe . 
   function calculate() { 
     let score = 0; 
